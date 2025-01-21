@@ -5,6 +5,7 @@ export default function RollingSuggestions({
 	suggestions,
 	hidden,
 }: { suggestions: string[]; hidden: boolean }) {
+	const [animationStarted, setAnimationStarted] = useState(false);
 	const animationDuration = 2000;
 	const [currentSuggestion, setCurrentSuggestion] = useState<
 		undefined | string
@@ -19,11 +20,14 @@ export default function RollingSuggestions({
 	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to include dependencies here
 	useEffect(() => {
 		randomizeSuggestion();
+		setAnimationStarted(true);
 		const interval = setInterval(() => {
 			randomizeSuggestion();
 		}, animationDuration);
 		return () => clearInterval(interval);
 	}, []);
+
+	if (!animationStarted) return;
 
 	return (
 		<div className={`${styles.container} ${hidden ? styles.hidden : ""}`}>
