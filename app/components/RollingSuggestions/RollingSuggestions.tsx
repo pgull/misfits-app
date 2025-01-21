@@ -6,37 +6,39 @@ export default function RollingSuggestions({
 	hidden,
 }: { suggestions: string[]; hidden: boolean }) {
 	const animationDuration = 2000;
-	const [currentSuggestion, setCurrentSuggestion] = useState<
-		undefined | string
-	>();
+	const [currentSuggestion, setCurrentSuggestion] = useState<string | undefined>();
+	const [isInitialized, setIsInitialized] = useState(false);
 
 	const randomizeSuggestion = () => {
-		setCurrentSuggestion(
-			suggestions[Math.floor(Math.random() * suggestions.length)],
-		);
+		const newSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+		setCurrentSuggestion(newSuggestion);
 	};
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to include dependencies here
 	useEffect(() => {
-		randomizeSuggestion();
-		const interval = setInterval(() => {
+		const initTimer = setTimeout(() => {
 			randomizeSuggestion();
-		}, animationDuration);
-		return () => clearInterval(interval);
+			setIsInitialized(true);
+		}, 100);
+		return () => clearTimeout(initTimer);
 	}, []);
 
-	if (!currentSuggestion) return;
+	useEffect(() => {
+		if (!isInitialized) return;
+
+		const interval = setInterval(randomizeSuggestion, animationDuration);
+		return () => clearInterval(interval);
+	}, [isInitialized]);
+
+	if (!currentSuggestion) return null;
 
 	return (
 		<div className={`${styles.container} ${hidden ? styles.hidden : ""}`}>
-			{currentSuggestion && (
-				<p
-					className={styles.suggestion}
-					style={{ animationDuration: `${animationDuration}ms` }}
-				>
-					{currentSuggestion}
-				</p>
-			)}
+			<p
+				className={styles.suggestion}
+				style={{ animationDuration: `${animationDuration}ms` }}
+			>
+				{currentSuggestion}
+			</p>
 		</div>
 	);
 }
