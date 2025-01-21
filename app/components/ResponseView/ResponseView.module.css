@@ -122,9 +122,11 @@
 }
 
 .sectionContent {
+  flex: 1;
   opacity: 0.6;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   font-size: var(--c4);
   gap: var(--c2);
   text-align: left;
@@ -136,14 +138,15 @@
   flex-wrap: wrap;
   flex-direction: row;
   font-size: var(--c3);
+  border-top: 2px dotted rgba(0, 0, 0, 0.5);
+  padding-top: var(--c2);
+  margin-top: var(--c2);
 }
 
-.tag {
-  margin-right: var(--c1);
-}
-
+.tag,
 .complexity {
   margin-right: var(--c1);
+  text-transform: capitalize;
 }
 
 .references {
