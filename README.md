@@ -1,6 +1,16 @@
 
 # AI Topic Explorer
 
+## Foreword
+
+This is my interpretation of the task given to me by Misfits & Machines.
+
+This task was simple yet weighty and I didn't want leverage AI to generate the entire project, as it wouldn't be a true representation of what you'd be evaluating me for. There are some things I skipped so I could deliver this in the time frame I wanted. Good UI takes experimentation, iteration, and time.
+
+ In digital product MVP-fashion and the interest of time and a deeper focus on my UI dev skillset, I've deviated from some of the original requirements, as only 30% was evaluating design. However, it is still the same end-result in spirit, but with a much heavier focus on the UI, interaction, animation, etc.
+
+There wasn't a true UX process involved in the task. No wire-framing or testing, etc.
+
 ## Get Started
 
 This is a React Next.js project. I use `Biome` for linting and formatting. Install that in VSCode if you haven't already.
@@ -19,15 +29,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can also view the deployment at [this URL](https://prestongull.com/misfits)
 
-## Foreword
-
-This is my interpretation of the task given to me by Misfits & Machines.
-
-This task was simple yet weighty and I didn't want leverage AI to generate the entire project, as it wouldn't be a true representation of what you'd be evaluating me for. There are some things I skipped so I could deliver this in the time frame I wanted. Good UI takes experimentation, iteration, and time.
-
- In digital product MVP-fashion and the interest of time and a deeper focus on my UI dev skillset, I've deviated from some of the original requirements, as only 30% was evaluating design. However, it is still the same end-result in spirit, but with a much heavier focus on the UI, interaction, animation, etc.
-
-There wasn't a true UX process involved in the task. No wire-framing or testing, etc.
 
 ## What is this?
 
