@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### See on the web
 
-You can also view the deployment at [this URL](https://misfits-app.vercel.app/)
+You can also view the deployment at [this URL](https://prestongull.com/misfits)
 
 ## Foreword
 
