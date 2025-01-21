@@ -67,24 +67,24 @@ export default function ResponseView({
 								>
 									{section.content}
 								</span>
-								{section.metadata && (
-									<div
-										className={styles.metadata}
-										style={{ borderColor: section.textColor }}
-									>
-										<span className={styles.complexity}>
-											{section.metadata.complexity},
-										</span>
-										{section.metadata?.tags.map((tag, index) => (
-											<span key={tag} className={styles.tag}>
-												{tag}
-												{index < (section.metadata?.tags.length ?? 0) - 1
-													? ","
-													: ""}
-											</span>
-										))}
-									</div>
-								)}
+							</div>
+						)}
+						{section.metadata && (
+							<div
+								className={styles.metadata}
+								style={{ borderColor: section.textColor }}
+							>
+								<span className={styles.complexity}>
+									{section.metadata.complexity},
+								</span>
+								{section.metadata?.tags.map((tag, index) => (
+									<span key={tag} className={styles.tag}>
+										{tag}
+										{index < (section.metadata?.tags.length ?? 0) - 1
+											? ","
+											: ""}
+									</span>
+								))}
 							</div>
 						)}
 					</button>
