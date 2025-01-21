@@ -29,7 +29,7 @@ export default function RollingSuggestions({
 		return () => clearInterval(interval);
 	}, [isInitialized]);
 
-	if (!currentSuggestion) return null;
+	if (!isInitialized) return;
 
 	return (
 		<div className={`${styles.container} ${hidden ? styles.hidden : ""}`}>
