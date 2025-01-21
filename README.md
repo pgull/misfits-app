@@ -15,6 +15,10 @@ You will need an `env.local` with a `NEXT_PUBLIC_OPENAI_API_KEY`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### See on the web
+
+You can also view the deployment at [this URL](https://misfits-app.vercel.app/)
+
 ## Foreword
 
 This is my interpretation of the task given to me by Misfits & Machines.
