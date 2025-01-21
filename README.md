@@ -56,6 +56,39 @@ I used AI to set the colors for the summary cards, informed by the prompt. IT'S 
 
 I took a note from Apple Intelligence with the glowing ring around the text box when you type stuff in. A fun challenge for me, as I've never used a conical gradient before in CSS. It was fun!
 
+### CSS and Design System Design
+
+I included examples of variables I would typically work with when creating a design system. In this case, I do it in terms of cells. like `var(--c1)`. A cell in this case is 6px; I sometimes do 8, but I feel 6 sometimes feels better on mobile if you're wanting to optimize.
+
+Example:
+```css
+  --c1: 6px;
+  --c2: 12px;
+  --c3: 18px;
+  --c4: 24px;
+  --c5: 30px;
+  --c6: 36px;
+  --c7: 42px;
+  --c8: 48px;
+  --c9: 54px;
+  --c10: 60px;
+```
+
+I also created some base stack components with gap shortcuts:
+
+```css
+.stack {
+  display: flex;
+  align-items: flex-start;
+}
+
+.stack.y-1 {
+  flex-direction: column;
+  gap: var(--c1);
+}
+```
+
+
 ## Things I deviated from
 
 Because my interpretation of the task was to focus on the UI, I deviated from the following requirements:
