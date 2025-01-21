@@ -1,6 +1,16 @@
 
 # AI Topic Explorer
 
+## Foreword
+
+This is my interpretation of the task given to me by Misfits & Machines.
+
+This task was simple yet weighty and I didn't want leverage AI to generate the entire project, as it wouldn't be a true representation of what you'd be evaluating me for. There are some things I skipped so I could deliver this in the time frame I wanted. Good UI takes experimentation, iteration, and time.
+
+ In digital product MVP-fashion and the interest of time and a deeper focus on my UI dev skillset, I've deviated from some of the original requirements, as only 30% was evaluating design. However, it is still the same end-result in spirit, but with a much heavier focus on the UI, interaction, animation, etc.
+
+There wasn't a true UX process involved in the task. No wire-framing or testing, etc.
+
 ## Get Started
 
 This is a React Next.js project. I use `Biome` for linting and formatting. Install that in VSCode if you haven't already.
@@ -19,15 +29,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can also view the deployment at [this URL](https://prestongull.com/misfits)
 
-## Foreword
-
-This is my interpretation of the task given to me by Misfits & Machines.
-
-This task was simple yet weighty and I didn't want leverage AI to generate the entire project, as it wouldn't be a true representation of what you'd be evaluating me for. There are some things I skipped so I could deliver this in the time frame I wanted. Good UI takes experimentation, iteration, and time.
-
- In digital product MVP-fashion and the interest of time and a deeper focus on my UI dev skillset, I've deviated from some of the original requirements, as only 30% was evaluating design. However, it is still the same end-result in spirit, but with a much heavier focus on the UI, interaction, animation, etc.
-
-There wasn't a true UX process involved in the task. No wire-framing or testing, etc.
 
 ## What is this?
 
@@ -55,6 +56,39 @@ I went with some neuemorphism because it's a decent representation of flat UI wi
 I used AI to set the colors for the summary cards, informed by the prompt. IT'S NOT ALWAYS PERFECT—You could get a bad color combo but it works most of the time :D
 
 I took a note from Apple Intelligence with the glowing ring around the text box when you type stuff in. A fun challenge for me, as I've never used a conical gradient before in CSS. It was fun!
+
+### CSS and Design System Design
+
+I included examples of variables I would typically work with when creating a design system. In this case, I do it in terms of cells. like `var(--c1)`. A cell in this case is 6px; I sometimes do 8, but I feel 6 sometimes feels better on mobile if you're wanting to optimize.
+
+Example:
+```css
+  --c1: 6px;
+  --c2: 12px;
+  --c3: 18px;
+  --c4: 24px;
+  --c5: 30px;
+  --c6: 36px;
+  --c7: 42px;
+  --c8: 48px;
+  --c9: 54px;
+  --c10: 60px;
+```
+
+I also created some base stack components with gap shortcuts:
+
+```css
+.stack {
+  display: flex;
+  align-items: flex-start;
+}
+
+.stack.y-1 {
+  flex-direction: column;
+  gap: var(--c1);
+}
+```
+
 
 ## Things I deviated from
 
