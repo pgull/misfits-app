@@ -1,14 +1,88 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Sans';
+  src: url('/fonts/NeueHaasDisplayBold.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --c1: 6px;
+  --c2: 12px;
+  --c3: 18px;
+  --c4: 24px;
+  --c5: 30px;
+  --c6: 36px;
+  --c7: 42px;
+  --c8: 48px;
+  --c9: 54px;
+  --c10: 60px;
+  --c11: 66px;
+  --c12: 72px;
+  --c13: 78px;
+  --c14: 84px;
+  --c15: 90px;
+  --c16: 96px;
+  --c17: 102px;
+  --c18: 108px;
+  --c19: 114px;
+  --c20: 120px;
+  --c21: 126px;
+  --c22: 132px;
+  --c23: 138px;
+  --c24: 144px;
+  --c25: 150px;
+  --c26: 156px;
+  --c27: 162px;
+  --c28: 168px;
+  --c29: 174px;
+  --c30: 180px;
+  --c31: 186px;
+  --c32: 192px;
+  --c33: 198px;
+  --c34: 204px;
+  --c35: 210px;
+  --c36: 216px;
+  --c37: 222px;
+  --c38: 228px;
+  --c39: 234px;
+  --c40: 240px;
+  --c41: 246px;
+  --c42: 252px;
+  --c43: 258px;
+  --c44: 264px;
+  --c45: 270px;
+  --c46: 276px;
+  --c47: 282px;
+  --c48: 288px;
+  --c49: 294px;
+  --c50: 300px;
+  --c51: 306px;
+  --c52: 312px;
+  --c53: 318px;
+  --c54: 324px;
+  --c55: 330px;
+  --c56: 336px;
+  --c57: 342px;
+  --c58: 348px;
+  --c59: 354px;
+  --c60: 360px;
+  --c61: 366px;
+  --c62: 372px;
+  --c63: 378px;
+  --c64: 384px;
+  --primary: #E058E2;
+  --secondary: #05B9F0;
+  --tertiary: #FFA006;
+  --border: rgba(0, 0, 0, 0.1);
+  --grey-100: #fff;
+  --grey-200: #f5f7fa;
+  --grey-300: #e1e5eb;
+  --grey-400: #bec4cd;
+  --grey-500: #9ea6b2;
+  --grey-600: #757d89;
+  --grey-700: #616873;
+  --grey-800: #424852;
+  --grey-900: #212529;
 }
+
 
 html,
 body {
@@ -17,17 +91,17 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--grey-200);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
+  font-family: 'Sans', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-weight: regular !important;
 }
 
 a {
@@ -35,8 +109,63 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1 {
+  font-size: var(--c8);
+  margin-left: -0.1em;
+  /* Just for kerning the main title */
+}
+
+p {
+  font-size: var(--c4);
+  color: var(--grey-500);
+}
+
+.stack {
+  display: flex;
+  align-items: flex-start;
+}
+
+.stack.y-1 {
+  flex-direction: column;
+  gap: var(--c1);
+}
+
+.stack.y-2 {
+  flex-direction: column;
+  gap: var(--c2);
+}
+
+.stack.y-3 {
+  flex-direction: column;
+  gap: var(--c3);
+}
+
+.stack.y-4 {
+  flex-direction: column;
+  gap: var(--c4);
+}
+
+.stack.y-5 {
+  flex-direction: column;
+  gap: var(--c5);
+}
+
+.stack.y-6 {
+  flex-direction: column;
+  gap: var(--c6);
+}
+
+.stack.y-7 {
+  flex-direction: column;
+  gap: var(--c7);
+}
+
+.stack.y-8 {
+  flex-direction: column;
+  gap: var(--c8);
+}
+
+.stack.y-9 {
+  flex-direction: column;
+  gap: var(--c9);
 }

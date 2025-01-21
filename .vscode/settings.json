@@ -1,0 +1,21 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "never",
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"editor.formatOnSave": true,
+	"javascript.preferences.importModuleSpecifier": "relative",
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"editor.tabSize": 2,
+	"cSpell.words": ["uniformtuxedo"]
+}

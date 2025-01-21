@@ -1,0 +1,101 @@
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0.5;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.spinnerContainer {
+    opacity: 0;
+    height: var(--c16);
+    width: var(--c16);
+    animation: scaleIn 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+    animation-delay: 0.5s;
+    z-index: 1000;
+    position: absolute;
+}
+
+.spinner {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--c16);
+    width: var(--c16);
+    border-radius: var(--c32);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* border: 1px solid var(--border); */
+    /* background-color: var(--grey-200); */
+    /* box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 var(--c3) var(--c3) rgba(0,0,0,0.1); */
+}
+
+.spinnerInner {
+    animation: zoom 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    height: var(--c8);
+    width: var(--c8);
+    border-radius: var(--c16);
+    background-color: var(--grey-200);
+    border: 1px solid var(--border);
+    box-shadow: 0 var(--c3) var(--c3) rgba(0, 0, 0, 0.1), inset 0 0 var(--c1) white;
+    z-index: 3;
+}
+
+.spinnerBallContainer {
+    animation: spin 1.5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+    position: absolute;
+    height: var(--c16);
+    width: var(--c16);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.spinnerBall {
+    height: var(--c4);
+    width: var(--c4);
+    border-radius: var(--c16);
+    background: radial-gradient(circle at 50% 30%, var(--grey-500), var(--grey-600), var(--grey-400));
+    box-shadow: 0 var(--c1) var(--c1) rgba(0, 0, 0, 0.3);
+    animation: spin-reverse 1.5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+}

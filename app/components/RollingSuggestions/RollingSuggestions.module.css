@@ -1,0 +1,56 @@
+@keyframes cycle {
+    0% {
+        transform: translateY(var(--c3));
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(calc(var(--c3) * -1));
+        opacity: 0;
+    }
+}
+
+
+.container {
+    transition: all 0.3s cubic-bezier(0.5, 0.5, 0, 1);
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: var(--c6);
+    pointer-events: none;
+}
+
+.container.hidden {
+    opacity: 0;
+}
+
+.suggestion {
+    opacity: 0;
+    animation: cycle ease-in-out infinite;
+    position: absolute;
+    font-size: var(--c4);
+    color: var(--grey-400);
+}
+
+.letter {
+    display: inline-block;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,19 @@
+.title {
+  transition: all 0.75s cubic-bezier(0.5, 0.5, 0, 1);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: var(--c5);
+  height: 100px;
+}
+
+.mainContainer {
+  width: 100vw;
+  max-width: calc(var(--c64) * 2);
+}
+
+.title.loading {
+  height: 0px;
+  opacity: 0;
+}
