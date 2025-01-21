@@ -15,6 +15,7 @@ export default function TopicInput({
 	const [textBoxWidth, setTextBoxWidth] = useState(0);
 	const [topic, setTopic] = useState("");
 	const formRef = useRef<HTMLFormElement>(null);
+	const [isInitialized, setIsInitialized] = useState(false);
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
@@ -40,6 +41,13 @@ export default function TopicInput({
 		}
 	}, [isLoading, formWidth]);
 
+	useEffect(() => {
+		const initializer = setTimeout(() => {
+			setIsInitialized(true);
+		}, 500);
+		return () => clearTimeout(initializer);
+	}, []);
+
 	const buttonDisabled = isLoading || !topic.trim();
 
 	return (
@@ -57,7 +65,7 @@ export default function TopicInput({
 				className={`${styles.inputContainer} ${buttonDisabled ? styles.disabled : ""} ${isLoading ? styles.loading : ""}`}
 				style={{ width: textBoxWidth }}
 			>
-				{!isLoading && (
+				{!isLoading && isInitialized && (
 					<RollingSuggestions
 						suggestions={topics}
 						hidden={!buttonDisabled || isLoading}
