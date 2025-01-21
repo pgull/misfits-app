@@ -101,7 +101,15 @@ export default function ResponseView({
 					<h3>References</h3>
 					<div className="stack y-1">
 						{response.references.map((ref, index) => (
-							<div key={ref}>{ref}</div>
+							<a
+								key={ref}
+								href={ref}
+								className={styles.reference}
+								target="_blank"
+								rel="noreferrer"
+							>
+								{ref}
+							</a>
 						))}
 					</div>
 				</div>

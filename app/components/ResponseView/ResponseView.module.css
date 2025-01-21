@@ -162,3 +162,7 @@
   gap: var(--c1);
   color: var(--grey-500);
 }
+
+.reference:hover {
+  text-decoration: underline;
+}
