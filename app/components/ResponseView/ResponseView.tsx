@@ -75,7 +75,7 @@ export default function ResponseView({
 								style={{ borderColor: section.textColor }}
 							>
 								<span className={styles.complexity}>
-									{section.metadata.complexity},
+									{section.metadata.complexity}:
 								</span>
 								{section.metadata?.tags.map((tag, index) => (
 									<span key={tag} className={styles.tag}>
